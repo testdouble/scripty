@@ -5,7 +5,9 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "teenytest && standard"
+    "test:unit": "teenytest",
+    "test:style": "standard",
+    "test": "npm run test:unit && npm run test:style"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,13 @@
   },
   "homepage": "https://github.com/testdouble/scripty#readme",
   "devDependencies": {
+    "intercept-stdout": "^0.1.2",
+    "rimraf": "^2.5.2",
     "standard": "^6.0.8",
-    "teenytest": "^3.0.0"
+    "teenytest": "^3.0.0",
+    "testdouble": "^1.4.1"
+  },
+  "dependencies": {
+    "lodash": "^4.8.2"
   }
 }
