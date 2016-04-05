@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+printenv
+npm test -- --debug-brk
