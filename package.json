@@ -1,0 +1,33 @@
+{
+  "name": "scripty",
+  "version": "0.0.1",
+  "description": "Because no one should be shell-scripting inside a JSON file.",
+  "main": "index.js",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "teenytest && standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdouble/scripty.git"
+  },
+  "keywords": [
+    "npm",
+    "scripts",
+    "dry",
+    "scripts",
+    "shell",
+    "script",
+    "management"
+  ],
+  "author": "Justin Searls <searls@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/testdouble/scripty/issues"
+  },
+  "homepage": "https://github.com/testdouble/scripty#readme",
+  "devDependencies": {
+    "standard": "^6.0.8",
+    "teenytest": "^3.0.0"
+  }
+}
