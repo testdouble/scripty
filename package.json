@@ -5,9 +5,10 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "test:unit": "teenytest",
+    "test:unit": "teenytest \"lib/**/*.test.js\" --helper test/unit-helper.js",
+    "test:safe": "teenytest \"test/safe/**/*.js\" --helper test/safe-helper.js",
     "test:style": "standard",
-    "test": "npm run test:unit && npm run test:style"
+    "test": "npm run test:unit && npm run test:style && npm run test:safe"
   },
   "repository": {
     "type": "git",
@@ -37,5 +38,8 @@
   },
   "dependencies": {
     "lodash": "^4.8.2"
+  },
+  "standard": {
+    "globals": ["td", "assert"]
   }
 }
