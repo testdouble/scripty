@@ -37,9 +37,14 @@
     "testdouble": "^1.4.1"
   },
   "dependencies": {
+    "async": "^1.5.2",
+    "glob": "^7.0.3",
     "lodash": "^4.8.2"
   },
   "standard": {
-    "globals": ["td", "assert"]
+    "globals": [
+      "td",
+      "assert"
+    ]
   }
 }
