@@ -1,40 +1,55 @@
 var scripty = require('../../index')
 var fs = require('fs')
-var intercept = require('intercept-stdout')
+var exec = require('child_process').exec
 var assert = require('assert')
 var _ = require('lodash')
+var stream = require('stream')
 
-var stdout, stderr, stopIntercept
+var stdout, stdoutText, stderr, stderrText, stopIntercept
 module.exports = {
   beforeEach: function () {
-    stdout = ''
-    stderr = ''
-    stopIntercept = intercept(function (text) {
-      stdout += text
-    }, function (text) {
-      stderr += text
+    stdout = new stream.Duplex()
+    stdout._read = function () {}
+    stdoutText = ''
+    stdout.on('data', function (text) {
+      stdoutText += text
+    })
+    stderr = new stream.Duplex()
+    stderr._read = function () {}
+    stderrText = ''
+    stderr.on('data', function (text) {
+      stderrText += text
     })
   },
-  outputAndRunScript: function () {
+  outputAndRunScript: function (done) {
     fs.writeFileSync('scripts/fake/helloworld',
       '#!/bin/bash\n' +
       'WORLD="World"\n' +
       'echo "Hello, $WORLD!"'
     )
+    exec('chmod +x "scripts/fake/helloworld"', function () {
+      scripty('fake:helloworld', {
+        stdio: [process.stdin, stdout, stderr]
+      }, function (er, code) {
+        assert.equal(0, code)
+        assert(_.includes(stdoutText, '> echo Hello, $WORLD!'), 'prints script')
+        assert(_.includes(stdoutText, 'Hello, World!'), 'prints output')
 
-    scripty('fake:helloworld')
-
-    assert(_.includes(stdout, '> echo Hello, $WORLD!'), 'prints script')
-    assert(_.includes(stdout, 'Hello, World!'), 'prints output')
+        done(er)
+      })
+    })
   },
-  noScriptFound: function () {
-    scripty('fake:noscriptfound')
+  noScriptFound: function (done) {
+    scripty('fake:noscriptfound', {
+      stdio: [process.stdin, stdout, stderr]
+    }, function (er, code) {
+      assert.notEqual(code, 0)
+      assert(_.includes(stderrText,
+        'Error: scripty - no script found for npm lifecycle "fake:noscriptfound"'
+      ))
 
-    assert(_.includes(stderr,
-      'Error: scripty - no script found for npm lifecycle "fake:noscriptfound"'
-    ))
-  },
-  afterEach: function () {
-    stopIntercept()
+      done()
+    })
+
   }
 }

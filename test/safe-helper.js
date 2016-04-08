@@ -4,10 +4,11 @@ var rimraf = require('rimraf')
 var fs = require('fs')
 
 module.exports = {
-  beforeAll: function () {
+  beforeEach: function () {
+    rimraf.sync('scripts/fake')
     fs.mkdirSync('scripts/fake')
   },
-  afterAll: function () {
+  afterEach: function () {
     rimraf.sync('scripts/fake')
   }
 }
