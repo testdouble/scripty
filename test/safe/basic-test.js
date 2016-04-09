@@ -1,11 +1,10 @@
-var _ = require('lodash')
 var path = require('path')
 
 var scripty = require('../../index')
 var grabStdio = require('../grab-stdio')
 var log = require('../../lib/log')
 
-var stdio
+var stdio, spawnTapper
 module.exports = {
   beforeEach: function () {
     stdio = {}
@@ -15,7 +14,7 @@ module.exports = {
     scripty('hello:world', {
       resolve: {
         builtIn: path.resolve('test/fixtures/built-in-scripts'),
-        scripts: path.resolve('test/fixtures/user-scripts'),
+        scripts: path.resolve('test/fixtures/user-scripts')
       },
       spawn: {
         tap: spawnTapper
@@ -46,7 +45,7 @@ module.exports = {
     scripty('fail', {
       resolve: {
         builtIn: path.resolve('test/fixtures/built-in-scripts'),
-        scripts: path.resolve('test/fixtures/user-scripts'),
+        scripts: path.resolve('test/fixtures/user-scripts')
       },
       spawn: {
         tap: spawnTapper
@@ -54,8 +53,8 @@ module.exports = {
     }, function (er, code) {
       assert.notEqual(0, code)
       assert.includes(log.read(),
-        'Error: scripty - script "fail" failed by exiting non-zero (' +
-        code + ').'
+        'Error: scripty - script "fail" failed by exiting ' +
+        'with a non-zero code (' + code + ').'
       )
       assert.includes(stdio.stderr,
         'cat: /silly/nonsense: No such file or directory'
