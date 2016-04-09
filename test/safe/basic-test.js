@@ -27,12 +27,14 @@ module.exports = {
       done(er)
     })
   },
+  noOptsInvocationPasses: function (done) {
+    scripty('clean:dist', function (er, code) {
+      assert.equal(0, code)
+      done(er)
+    })
+  },
   noScriptFound: function (done) {
-    scripty('not:a:real:thing', {
-      spawn: {
-        tap: spawnTapper
-      }
-    }, function (er, code) {
+    scripty('not:a:real:thing', function (er, code) {
       assert.notEqual(0, code)
       assert.includes(er.message,
         'Error: scripty - no script found for npm lifecycle "not:a:real:thing"'
