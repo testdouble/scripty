@@ -41,5 +41,26 @@ module.exports = {
 
       done(null)
     })
+  },
+  scriptFoundButFailed: function (done) {
+    scripty('fail', {
+      resolve: {
+        builtIn: path.resolve('test/fixtures/built-in-scripts'),
+        scripts: path.resolve('test/fixtures/user-scripts'),
+      },
+      spawn: {
+        tap: spawnTapper
+      }
+    }, function (er, code) {
+      assert.notEqual(0, code)
+      assert.includes(log.read(),
+        'Error: scripty - script "fail" failed by exiting non-zero (' +
+        code + ').'
+      )
+      assert.includes(stdio.stderr,
+        'cat: /silly/nonsense: No such file or directory'
+      )
+      done(er)
+    })
   }
 }
