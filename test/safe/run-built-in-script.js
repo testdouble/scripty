@@ -1,7 +1,9 @@
-var scripty = require('../../index')
-var grabStdio = require('../grab-stdio')
 var _ = require('lodash')
 var path = require('path')
+
+var scripty = require('../../index')
+var grabStdio = require('../grab-stdio')
+var log = require('../../lib/log')
 
 module.exports = {
   outputAndRunScript: function (done) {
@@ -16,7 +18,7 @@ module.exports = {
       }
     }, function (er, code) {
       assert.equal(0, code)
-      assert.includes(stdio.stdout, '> echo Hello, $WORLD!')
+      assert.includes(log.read(), '> echo "Hello, $WORLD!"')
       assert.includes(stdio.stdout, 'Hello, World!')
 
       done(er)
