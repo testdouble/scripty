@@ -6,8 +6,8 @@ var printScript = require('./lib/print-script')
 
 module.exports = function (npmLifecycle, options, cb) {
   if (typeof options === 'function') cb = options, options = {}
-  resolveScript(npmLifecycle, options.resolve, function (er, scriptFile) {
-    if (er) { cb(er) }
+  resolveScript(npmLifecycle, options.resolve || {}, function (er, scriptFile) {
+    if (er) { return cb(er) }
     printScript(scriptFile)
     var child = spawn(scriptFile, options.spawn)
     child.on('close', function (code) {
@@ -16,3 +16,4 @@ module.exports = function (npmLifecycle, options, cb) {
     if (_.property(options, 'spawn.tap')) { options.spawn.tap(child) }
   })
 }
+
