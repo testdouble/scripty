@@ -1,25 +1,10 @@
-var path = require('path')
 
-var scripty = require('../../index')
-var grabStdio = require('../grab-stdio')
 var log = require('../../lib/log')
+var runScripty = require('../run-scripty')
 
-var stdio, spawnTapper
 module.exports = {
-  beforeEach: function () {
-    stdio = {}
-    spawnTapper = grabStdio(stdio)
-  },
   outputAndRunScript: function (done) {
-    scripty('hello:world', {
-      resolve: {
-        builtIn: path.resolve('test/fixtures/built-in-scripts'),
-        scripts: path.resolve('test/fixtures/user-scripts')
-      },
-      spawn: {
-        tap: spawnTapper
-      }
-    }, function (er, code) {
+    runScripty('hello:world', {}, function (er, code, stdio) {
       assert.equal(0, code)
       assert.includes(log.read(), '> echo "Hello, $WORLD!"')
       assert.includes(stdio.stdout, 'Hello, World!')
@@ -27,14 +12,8 @@ module.exports = {
       done(er)
     })
   },
-  noOptsInvocationPasses: function (done) {
-    scripty('noop', function (er, code) {
-      assert.equal(0, code)
-      done(er)
-    })
-  },
   noScriptFound: function (done) {
-    scripty('not:a:real:thing', function (er, code) {
+    runScripty('not:a:real:thing', {}, function (er, code, stdio) {
       assert.notEqual(0, code)
       assert.includes(er.message,
         'Error: scripty - no script found for npm lifecycle "not:a:real:thing"'
@@ -44,15 +23,7 @@ module.exports = {
     })
   },
   scriptFoundButFailed: function (done) {
-    scripty('fail', {
-      resolve: {
-        builtIn: path.resolve('test/fixtures/built-in-scripts'),
-        scripts: path.resolve('test/fixtures/user-scripts')
-      },
-      spawn: {
-        tap: spawnTapper
-      }
-    }, function (er, code) {
+    runScripty('fail', {}, function (er, code, stdio) {
       assert.notEqual(0, code)
       assert.includes(log.read(),
         'Error: scripty - script "fail" failed by exiting ' +
