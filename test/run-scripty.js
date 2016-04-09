@@ -6,7 +6,7 @@ var grabStdio = require('./grab-stdio')
 
 module.exports = function (name, opts, cb) {
   var stdio = {}
-  
+
   scripty(name, _.extend({}, {
     resolve: {
       builtIn: path.resolve('test/fixtures/built-in-scripts'),
