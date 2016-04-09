@@ -1,6 +1,5 @@
-
-var log = require('../../lib/log')
 var runScripty = require('../run-scripty')
+var log = require('../../lib/log')
 
 module.exports = {
   outputAndRunScript: function (done) {
@@ -25,14 +24,14 @@ module.exports = {
   scriptFoundButFailed: function (done) {
     runScripty('fail', {}, function (er, code, stdio) {
       assert.notEqual(0, code)
-      assert.includes(log.read(),
+      assert.includes(er.message,
         'Error: scripty - script "fail" failed by exiting ' +
         'with a non-zero code (' + code + ').'
       )
       assert.includes(stdio.stderr,
         'cat: /silly/nonsense: No such file or directory'
       )
-      done(er)
+      done(null)
     })
   }
 }
