@@ -1,55 +1,28 @@
 var scripty = require('../../index')
-var fs = require('fs')
-var exec = require('child_process').exec
-var assert = require('assert')
+var grabStdio = require('../grab-stdio')
 var _ = require('lodash')
-var stream = require('stream')
+var path = require('path')
 
-var stdout, stdoutText, stderr, stderrText, stopIntercept
 module.exports = {
-  beforeEach: function () {
-    stdout = new stream.Duplex()
-    stdout._read = function () {}
-    stdoutText = ''
-    stdout.on('data', function (text) {
-      stdoutText += text
-    })
-    stderr = new stream.Duplex()
-    stderr._read = function () {}
-    stderrText = ''
-    stderr.on('data', function (text) {
-      stderrText += text
-    })
-  },
   outputAndRunScript: function (done) {
-    fs.writeFileSync('scripts/fake/helloworld',
-      '#!/bin/bash\n' +
-      'WORLD="World"\n' +
-      'echo "Hello, $WORLD!"'
-    )
-    exec('chmod +x "scripts/fake/helloworld"', function () {
-      scripty('fake:helloworld', {
-        stdio: [process.stdin, stdout, stderr]
-      }, function (er, code) {
-        assert.equal(0, code)
-        assert(_.includes(stdoutText, '> echo Hello, $WORLD!'), 'prints script')
-        assert(_.includes(stdoutText, 'Hello, World!'), 'prints output')
+    var stdio = {}
+    scripty('hello:world', {
+      resolve: {
+        builtIn: path.resolve('test/fixtures/built-in-scripts'),
+        scripts: path.resolve('test/fixtures/user-scripts'),
+      },
+      spawn: {
+        tap: grabStdio(stdio)
+      }
+    }, function (er, code) {
+      assert.equal(0, code)
+      assert.includes(stdio.stdout, '> echo Hello, $WORLD!')
+      assert.includes(stdio.stdout, 'Hello, World!')
 
-        done(er)
-      })
+      done(er)
     })
   },
   noScriptFound: function (done) {
-    scripty('fake:noscriptfound', {
-      stdio: [process.stdin, stdout, stderr]
-    }, function (er, code) {
-      assert.notEqual(code, 0)
-      assert(_.includes(stderrText,
-        'Error: scripty - no script found for npm lifecycle "fake:noscriptfound"'
-      ))
-
-      done()
-    })
-
+    done('nope')
   }
 }

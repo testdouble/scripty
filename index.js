@@ -1,12 +1,16 @@
 var spawn = require('child_process').spawn
+var _ = require('lodash')
 
 var resolveScript = require('./lib/resolve-script')
 
 module.exports = function (npmLifecycle, options, cb) {
-  resolveScript(npmLifecycle, function (er, scriptFile) {
+  if (typeof options === 'function') cb = options, options = {}
+  resolveScript(npmLifecycle, options.resolve, function (er, scriptFile) {
     if (er) { cb(er) }
-    spawn(scriptFile, options).on('exit', function (code) {
+    var child = spawn(scriptFile, options.spawn)
+    child.on('close', function (code) {
       cb(null, code)
     })
+    if (_.property(options, 'spawn.tap')) { options.spawn.tap(child) }
   })
 }
