@@ -30,9 +30,7 @@
   },
   "homepage": "https://github.com/testdouble/scripty#readme",
   "devDependencies": {
-    "intelli-espower-loader": "^1.0.1",
     "intercept-stdout": "^0.1.2",
-    "power-assert": "^1.3.1",
     "rimraf": "^2.5.2",
     "standard": "^6.0.8",
     "teenytest": "^3.0.0",
