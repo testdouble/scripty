@@ -28,7 +28,7 @@ module.exports = {
     })
   },
   noOptsInvocationPasses: function (done) {
-    scripty('clean:dist', function (er, code) {
+    scripty('noop', function (er, code) {
       assert.equal(0, code)
       done(er)
     })

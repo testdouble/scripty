@@ -20,7 +20,7 @@ module.exports = function (npmLifecycle, options, cb) {
       }
       cb(null, code)
     })
-    if (_.property(options, 'spawn.tap')) { options.spawn.tap(child) }
+    _.invoke(options, 'spawn.tap', child)
   })
 }
 
