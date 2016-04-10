@@ -45,7 +45,8 @@
   "standard": {
     "globals": [
       "td",
-      "assert"
+      "assert",
+      "UNSUPPORTED_TDD"
     ]
   }
 }
