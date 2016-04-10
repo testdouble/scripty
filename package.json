@@ -32,6 +32,7 @@
   "devDependencies": {
     "intercept-stdout": "^0.1.2",
     "rimraf": "^2.5.2",
+    "semver": "^5.1.0",
     "standard": "^6.0.8",
     "teenytest": "^3.0.0",
     "testdouble": "^1.4.1"
