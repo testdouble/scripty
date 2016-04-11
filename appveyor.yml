@@ -12,6 +12,8 @@ install:
 cache:
   - '%APPDATA%\npm-cache'
 
+build: off
+
 test_script:
   - npm version
   - cmd: npm test
