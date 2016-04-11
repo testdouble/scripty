@@ -22,7 +22,8 @@ module.exports = function (npmLifecycle, options, cb) {
 var spawnWrapper = function (options, scriptFile) {
   return function (cb) {
     printScript(scriptFile)
-    var child = spawn(scriptFile, options.spawn)
+    var userArgs = options.userArgs || process.argv.slice(2)
+    var child = spawn(scriptFile, userArgs, options.spawn)
     child.on('close', function (code) {
       if (code !== 0) {
         cb(new Error(

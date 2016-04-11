@@ -59,6 +59,24 @@ debate](https://github.com/testdouble/scripty/issues/1)).
 
 Ready to take things to the next level? Check this stuff out:
 
+### Passing command-line args
+To pass additional arguments to your script, ensure that your script makes use of the `$@` shell variable (`ARGV`, or `process.argv` for Ruby or Node) in the place you'd like those variables to go.
+
+```
+# file: test/unit
+mocha --some flags $@
+```
+
+
+Then, simply include your argments after a double-dash (`--`), and you're all set.
+
+```
+npm run test -- --trace
+
+# equivalent to:
+mocha --some flags --trace
+```
+
 ### Batching "sub-scripts"
 
 Let's say you have two test tasks in `scripts/test/unit` and
