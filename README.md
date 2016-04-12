@@ -1,5 +1,6 @@
 # scripty
 
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/3oduiun4em1gdr3o/branch/master?svg=true)](https://ci.appveyor.com/project/testdouble/scripty)
 [![Build Status](https://travis-ci.org/testdouble/scripty.svg?branch=master)](https://travis-ci.org/testdouble/scripty)
 
 ## What is?
@@ -106,6 +107,41 @@ Without changing the JSON from the previous example:
 Defining a script named `scripts/test/index` will cause scripty to only run that
 `index` script, as opposed to globbing for all the scripts it finds in
 `scripts/test/*`.
+
+### Windows support
+
+Windows support is provided by Scripty in two ways:
+
+1. If everything in your `scripts` directory can be safely executed by Windows,
+no action is needed (this is only likely if you don't have collaborators on
+Unix-like platforms)
+2. If your project needs to run scripts in both Windows & Unix, then you may
+define a `scripts-win/` directory with a symmetrical set of scripts to whatever
+Unix  scripts might be found in `scripts/`
+
+To illustrate the above, suppose you have this bash script configured as
+``"test/unit"`` in your package.json file and this bash script defined in
+`scripts/test/unit`:
+
+``` bash
+#!/usr/bin/env bash
+
+teenytest --helper test/unit-helper.js "lib/**/*.test.js"
+```
+
+In order to add Windows support, you could define `scripts-win/test/unit.cmd`
+with this script:
+
+``` bat
+@ECHO OFF
+
+teenytest --helper test\unit-helper.js "lib\**\*.test.js"
+```
+
+With a configuration like the above, if `npm run test:unit` is run from a Unix
+platform, the initial bash script in `scripts/` will run. If the same CLI
+command is run from Windows, however, the batch script in `scripts-win/` will be
+run.
 
 ## Likely questions
 
