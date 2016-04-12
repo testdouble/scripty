@@ -1,0 +1,5 @@
+@ECHO OFF
+
+SET WORLD=World
+
+ECHO Hello, %WORLD%!
