@@ -5,7 +5,11 @@ module.exports = {
   outputAndRunScript: function (done) {
     runScripty('hello:world', {}, function (er, code, stdio) {
       assert.equal(0, code)
-      assert.includes(log.read(), '> echo "Hello, $WORLD!"')
+      if (process.platform === 'win32') {
+        assert.includes(log.read(), '> ECHO Hello, %WORLD%!')
+      } else {
+        assert.includes(log.read(), '> echo "Hello, $WORLD!')
+      }
       assert.includes(stdio.stdout, 'Hello, World!')
 
       done(er)
@@ -28,9 +32,11 @@ module.exports = {
         'Error: scripty - script "fail" failed by exiting ' +
         'with a non-zero code (' + code + ').'
       )
-      assert.includes(stdio.stderr,
-        'cat: /silly/nonsense: No such file or directory'
-      )
+      if (process.platform === 'win32') {
+        assert.includes(stdio.stderr, 'The system cannot find the path specified.')
+      } else {
+        assert.includes(stdio.stderr, 'cat: /silly/nonsense: No such file or directory')
+      }
       done(null)
     })
   }
