@@ -1,8 +1,18 @@
 # Change Log
 
-## [Unreleased](https://github.com/testdouble/scripty/tree/HEAD)
+## [v1.2.1](https://github.com/testdouble/scripty/tree/v1.2.1) (2016-04-15)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.2.0...v1.2.1)
 
-[Full Changelog](https://github.com/testdouble/scripty/compare/v1.1.0...HEAD)
+**Implemented enhancements:**
+
+- Handle when `scripty` is run outside `npm run` [\#9](https://github.com/testdouble/scripty/issues/9)
+
+**Merged pull requests:**
+
+- When run outside of npm, print a warning [\#14](https://github.com/testdouble/scripty/pull/14) ([searls](https://github.com/searls))
+
+## [v1.2.0](https://github.com/testdouble/scripty/tree/v1.2.0) (2016-04-15)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.1.0...v1.2.0)
 
 **Closed issues:**
 
