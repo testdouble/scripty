@@ -1,4 +1,4 @@
-var scripty = require('../../index')
+var scripty = require('../../lib/scripty')
 
 module.exports = function worksWithNoOpts (done) {
   scripty('noop', function (er, code) {
