@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+echo "Your args were: $1 \"$2\""

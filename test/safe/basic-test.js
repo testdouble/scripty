@@ -39,5 +39,14 @@ module.exports = {
       }
       done(null)
     })
+  },
+  passArgsToScript: function (done) {
+    var options = {userArgs: ['--test', 'arg passed by user']}
+
+    runScripty('args:echoer', options, function (er, code, stdio) {
+      assert.includes(stdio.stdout, 'Your args were: --test "arg passed by user"')
+
+      done(er)
+    })
   }
 }

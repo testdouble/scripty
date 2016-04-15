@@ -1,7 +1,7 @@
 var _ = require('lodash')
 var path = require('path')
 
-var scripty = require('../index')
+var scripty = require('../lib/scripty')
 var grabStdio = require('./grab-stdio')
 
 var builtInPath, userPath

@@ -61,6 +61,23 @@ debate](https://github.com/testdouble/scripty/issues/1)).
 
 Ready to take things to the next level? Check this stuff out:
 
+### Passing command-line args
+
+To pass command-line args when you're running an npm script, set them after
+`--` and npm will forward them to your script (and scripty will do its part by
+forwarding them along).
+
+For example, if you had a script in `scripts/echo/hello`:
+
+``` sh
+#!/usr/bin/env sh
+
+echo Hello, "$1"!
+```
+
+Then you can run `npm run echo:hello -- WORLD` and see your script print
+`"Hello, WORLD!"`.
+
 ### Batching "sub-scripts"
 
 Let's say you have two test tasks in `scripts/test/unit` and
