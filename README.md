@@ -62,22 +62,21 @@ debate](https://github.com/testdouble/scripty/issues/1)).
 Ready to take things to the next level? Check this stuff out:
 
 ### Passing command-line args
-To pass additional arguments to your script, ensure that your script makes use of the `$@` shell variable (`ARGV`, or `process.argv` for Ruby or Node) in the place you'd like those variables to go.
 
+To pass command-line args when you're running an npm script, set them after
+`--` and npm will forward them to your script (and scripty will do its part by
+forwarding them along).
+
+For example, if you had a script in `scripts/echo/hello`:
+
+``` sh
+#!/usr/bin/env sh
+
+echo Hello, "$1"!
 ```
-# file: test/unit
-mocha --some flags $@
-```
 
-
-Then, simply include your argments after a double-dash (`--`), and you're all set.
-
-```
-npm run test -- --trace
-
-# equivalent to:
-mocha --some flags --trace
-```
+Then you can run `npm run echo:hello -- WORLD` and see your script print
+`"Hello, WORLD!"`.
 
 ### Batching "sub-scripts"
 
