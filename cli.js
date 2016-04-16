@@ -23,6 +23,7 @@ if (!lifecycleEvent) {
 
   scripty(lifecycleEvent, {
     userArgs: process.argv.slice(2),
+    parallel: process.env['SCRIPTY_PARALLEL'] === 'true',
     spawn: {
       stdio: 'inherit'
     }

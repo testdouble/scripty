@@ -126,6 +126,32 @@ Defining a script named `scripts/test/index` will cause scripty to only run that
 `index` script, as opposed to globbing for all the scripts it finds in
 `scripts/test/*`.
 
+### Running scripts in parallel
+
+If you have a certain command that will match mutiple child scripts (for
+instance, if `npm run watch` matches `scripts/watch/js` and
+`scripts/watch/css`), then you can tell scripty to run the sub-scripts in
+parallel by setting a `SCRIPTY_PARALLEL` env variable to `'true'`. This may
+be used to similar effect as the
+[npm-run-all](https://www.npmjs.com/package/npm-run-all) module.
+
+To illustrate, to run a scripty script in parallel, you might:
+
+```
+$ SCRIPTY_PARALLEL=true npm run watch
+```
+
+Or, if that particular script should always be run in parallel, you can set the
+variable in your package.json:
+
+``` json
+"scripts": {
+  "watch": "SCRIPTY_PARALLEL=true scripty"
+}
+```
+
+Which will run any sub-scripts in parallel whenever you run `npm run watch`.
+
 ### Windows support
 
 Windows support is provided by Scripty in two ways:
