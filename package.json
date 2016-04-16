@@ -1,6 +1,6 @@
 {
   "name": "scripty",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Because no one should be shell-scripting inside a JSON file.",
   "main": "lib/scripty.js",
   "bin": "cli.js",
