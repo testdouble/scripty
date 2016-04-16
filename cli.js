@@ -26,6 +26,10 @@ if (!lifecycleEvent) {
     parallel: process.env['SCRIPTY_PARALLEL'] === 'true',
     spawn: {
       stdio: 'inherit'
+    },
+    resolve: {
+      scripts: process.env.npm_package_scripty_path,
+      scriptsWin: process.env.npm_package_scripty_windowsPath
     }
   }, function (er, code) {
     if (er) { throw er }
