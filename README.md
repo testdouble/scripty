@@ -129,9 +129,13 @@ Defining a script named `scripts/test/index` will cause scripty to only run that
 ### Running scripts in parallel
 
 If you have a certain command that will match mutiple child scripts (for
-instance, `npm run watch` which matches `scripts/watch/js` and
+instance, if `npm run watch` matches `scripts/watch/js` and
 `scripts/watch/css`), then you can tell scripty to run the sub-scripts in
-parallel by setting a `SCRIPTY_PARALLEL` env variable to `'true'`. You might:
+parallel by setting a `SCRIPTY_PARALLEL` env variable to `'true'`. This may
+be used to similar effect as the
+[npm-run-all](https://www.npmjs.com/package/npm-run-all) module.
+
+To illustrate, to run a scripty script in parallel, you might:
 
 ```
 $ SCRIPTY_PARALLEL=true npm run watch
@@ -140,7 +144,7 @@ $ SCRIPTY_PARALLEL=true npm run watch
 Or, if that particular script should always be run in parallel, you can set the
 variable in your package.json:
 
-```
+``` json
 "scripts": {
   "watch": "SCRIPTY_PARALLEL=true scripty"
 }
