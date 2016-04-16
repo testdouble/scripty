@@ -1,5 +1,16 @@
 # Change Log
 
+## [v1.3.0](https://github.com/testdouble/scripty/tree/v1.3.0) (2016-04-16)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.2.3...v1.3.0)
+
+**Implemented enhancements:**
+
+- Running tasks in parallel [\#10](https://github.com/testdouble/scripty/issues/10)
+
+**Merged pull requests:**
+
+- Implements SCRIPTY\_PARALLEL [\#21](https://github.com/testdouble/scripty/pull/21) ([searls](https://github.com/searls))
+
 ## [v1.2.3](https://github.com/testdouble/scripty/tree/v1.2.3) (2016-04-16)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.2.2...v1.2.3)
 
