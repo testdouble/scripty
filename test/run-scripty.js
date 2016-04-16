@@ -16,7 +16,7 @@ if (process.platform === 'win32') {
 module.exports = function (name, opts, cb) {
   var stdio = {}
 
-  scripty(name, _.extend({}, {
+  scripty(name, _.defaultsDeep({}, opts, {
     resolve: {
       builtIn: builtInPath,
       scripts: userPath
@@ -24,8 +24,7 @@ module.exports = function (name, opts, cb) {
     spawn: {
       tap: grabStdio(stdio)
     }
-
-  }, opts), function (er, code) {
+  }), function (er, code) {
     cb(er, code, stdio)
   })
 }
