@@ -98,7 +98,6 @@ case, just add a `"test"` entry to your `package.json` like so:
   "test:unit": "scripty",
   "test:integration": "scripty",
   "test": "scripty"
-
 }
 ```
 
@@ -118,7 +117,6 @@ Without changing the JSON from the previous example:
   "test:unit": "scripty",
   "test:integration": "scripty",
   "test": "scripty"
-
 }
 ```
 
