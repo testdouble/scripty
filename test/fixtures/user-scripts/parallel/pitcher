@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+ruby test/fixtures/baseball/pitcher.rb
+
+
