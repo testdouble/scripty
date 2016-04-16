@@ -1,5 +1,16 @@
 # Change Log
 
+## [v1.2.2](https://github.com/testdouble/scripty/tree/v1.2.2) (2016-04-16)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.2.1...v1.2.2)
+
+**Closed issues:**
+
+- more info [\#15](https://github.com/testdouble/scripty/issues/15)
+
+**Merged pull requests:**
+
+- don't mistake directories for executables [\#16](https://github.com/testdouble/scripty/pull/16) ([boneskull](https://github.com/boneskull))
+
 ## [v1.2.1](https://github.com/testdouble/scripty/tree/v1.2.1) (2016-04-15)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.2.0...v1.2.1)
 
