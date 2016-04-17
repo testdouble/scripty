@@ -1,8 +1,8 @@
-var spawn = require('child_process').spawn
+var exec = require('child_process').exec
 var path = require('path')
 
 module.exports = function (done) {
-  var exampleTestRun = spawn('npm', ['test'], {
+  var exampleTestRun = exec('npm test', {
     cwd: path.resolve(__dirname, '../../example')
   })
 
