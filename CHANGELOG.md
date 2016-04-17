@@ -1,5 +1,20 @@
 # Change Log
 
+## [v1.4.0](https://github.com/testdouble/scripty/tree/v1.4.0) (2016-04-17)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.3.0...v1.4.0)
+
+**Implemented enhancements:**
+
+- Way to specify a folder for scripts [\#8](https://github.com/testdouble/scripty/issues/8)
+
+**Closed issues:**
+
+- Separating scripts into one file?  [\#23](https://github.com/testdouble/scripty/issues/23)
+
+**Merged pull requests:**
+
+- Allow users to configure custom script directories [\#24](https://github.com/testdouble/scripty/pull/24) ([searls](https://github.com/searls))
+
 ## [v1.3.0](https://github.com/testdouble/scripty/tree/v1.3.0) (2016-04-16)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.2.3...v1.3.0)
 
