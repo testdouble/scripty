@@ -190,7 +190,7 @@ run.
 By default, scripty will search for scripts in `scripts/` relative to your
 module root (and if you're running windows, it'll check `scripts-win/` first).
 If you'd like to customize the base directories scripty uses to search for your
-scripts, add a `"scritpy"` object property to your package.json like so:
+scripts, add a `"scripty"` object property to your package.json like so:
 
 ``` json
 "scripty": {
