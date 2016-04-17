@@ -1,0 +1,11 @@
+{
+  "name": "example-scripty-project",
+  "version": "1.0.0",
+  "description": "Just an example of how to use scripty",
+  "main": "index.js",
+  "scripts": {
+    "test": "scripty"
+  },
+  "author": "Justin Searls <searls@gmail.com>",
+  "license": "MIT"
+}
