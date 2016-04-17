@@ -185,6 +185,24 @@ platform, the initial bash script in `scripts/` will run. If the same CLI
 command is run from Windows, however, the batch script in `scripts-win/` will be
 run.
 
+### Specifying custom script directories
+
+By default, scripty will search for scripts in `scripts/` relative to your
+module root (and if you're running windows, it'll check `scripts-win/` first).
+If you'd like to customize the base directories scripty uses to search for your
+scripts, add a `"scritpy"` object property to your package.json like so:
+
+``` json
+"scripty": {
+  "path": "../core/scripts",
+  "windowsPath": "../core/scripts-win"
+}
+```
+
+You can configure either or both of `"path"` and `"windowsPath"` to custom
+locations of your choosing. This may be handy in situations where multiple
+projects share the same set of scripts.
+
 ## Likely questions
 
 * **Is this black magic?** - Nope! For once, instilling some convention didn't
