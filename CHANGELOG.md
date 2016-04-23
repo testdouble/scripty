@@ -1,5 +1,30 @@
 # Change Log
 
+## [Unreleased](https://github.com/testdouble/scripty/tree/HEAD)
+
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.5.0...HEAD)
+
+**Implemented enhancements:**
+
+- Add a dry run option [\#13](https://github.com/testdouble/scripty/issues/13)
+
+## [v1.5.0](https://github.com/testdouble/scripty/tree/v1.5.0) (2016-04-23)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.4.0...v1.5.0)
+
+**Closed issues:**
+
+- Performance [\#34](https://github.com/testdouble/scripty/issues/34)
+- magic [\#31](https://github.com/testdouble/scripty/issues/31)
+- alternative syntax [\#30](https://github.com/testdouble/scripty/issues/30)
+- options [\#29](https://github.com/testdouble/scripty/issues/29)
+
+**Merged pull requests:**
+
+- add suggested documentation to FAQ section of README [\#32](https://github.com/testdouble/scripty/pull/32) ([ashleygwilliams](https://github.com/ashleygwilliams))
+- Fix typo in Readme [\#27](https://github.com/testdouble/scripty/pull/27) ([hanneskaeufler](https://github.com/hanneskaeufler))
+- Add an option to perform a dry run [\#26](https://github.com/testdouble/scripty/pull/26) ([hanneskaeufler](https://github.com/hanneskaeufler))
+- Add a trivial example project [\#25](https://github.com/testdouble/scripty/pull/25) ([searls](https://github.com/searls))
+
 ## [v1.4.0](https://github.com/testdouble/scripty/tree/v1.4.0) (2016-04-17)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.3.0...v1.4.0)
 
