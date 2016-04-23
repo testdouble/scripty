@@ -203,6 +203,19 @@ You can configure either or both of `"path"` and `"windowsPath"` to custom
 locations of your choosing. This may be handy in situations where multiple
 projects share the same set of scripts.
 
+### Dry runs
+
+To perform a dry run of your scripts—something that's handy to check which
+scripts will run from a particular command without actually executing potentially
+destructive scripts, you can set an environment variable like so:
+
+```
+$ SCRIPTY_DRY_RUN=true npm run publish:danger:stuff
+```
+
+This will print the path and contents of each script the command would execute in
+the order they would be executed if you were to run the command normally.
+
 ## Likely questions
 
 * **Is this black magic?** - Nope! For once, instilling some convention didn't
@@ -212,14 +225,14 @@ try running `printenv` from a script some time!
 it's **executable**! In UNIX, this can be accomplished by running
 `chmod +x scripts/path/to/my/script`
 * **How can I expect my users to understand what this does?** Documenting your
-project's use of `scripty` in the `README` is probably a good idea. Here's 
+project's use of `scripty` in the `README` is probably a good idea. Here's
 some copy pasta if you don't feel like writing it up yourself:
 
   > ## npm scripts
   > MyProject uses [`scripty`](https://github.com/testdouble/scripty) to organize
   > npm scripts. The scripts are defined in the [`scripts`](/scripts) directory.
   > In `package.json` you'll see the word `scripty` as opposed to the script
-  > content you'd expect. For more info, see 
+  > content you'd expect. For more info, see
   > [scripty's GitHub](https://github.com/testdouble/scripty).
 
   > {{ insert table containing script names and what they do, e.g.
