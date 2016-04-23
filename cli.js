@@ -24,6 +24,7 @@ if (!lifecycleEvent) {
   scripty(lifecycleEvent, {
     userArgs: process.argv.slice(2),
     parallel: process.env['SCRIPTY_PARALLEL'] === 'true',
+    dryRun: process.env['SCRIPTY_DRY_RUN'] === 'true',
     spawn: {
       stdio: 'inherit'
     },
