@@ -1,5 +1,5 @@
 var runScripty = require('../run-scripty')
-var log = require('../../lib/log')
+var log = require('../../lib/run/log')
 
 module.exports = {
   outputAndRunScript: function (done) {
