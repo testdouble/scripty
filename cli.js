@@ -25,6 +25,7 @@ if (!lifecycleEvent) {
     userArgs: process.argv.slice(2),
     parallel: process.env['SCRIPTY_PARALLEL'] === 'true',
     dryRun: process.env['SCRIPTY_DRY_RUN'] === 'true',
+    silent: process.env['SCRIPTY_SILENT'] === 'true',
     spawn: {
       stdio: 'inherit'
     },

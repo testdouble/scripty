@@ -217,6 +217,17 @@ $ SCRIPTY_DRY_RUN=true npm run publish:danger:stuff
 This will print the path and contents of each script the command would execute in
 the order they would be executed if you were to run the command normally.
 
+### Silent mode
+
+In case you don't want to the output to be cluttered by the script contents, you
+can run scripty in silent mode:
+
+```
+$ SCRIPTY_SILENT=true npm run publish:danger:stuff
+```
+
+This will omit printing the path and contents of each script the command executes.
+
 ## Likely questions
 
 * **Is this black magic?** - Nope! For once, instilling some convention didn't
