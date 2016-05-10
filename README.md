@@ -153,7 +153,7 @@ Which will run any sub-scripts in parallel whenever you run `npm run watch`.
 
 ### Windows support
 
-Windows support is provided by Scripty in two ways:
+Windows support is provided by scripty in two ways:
 
 1. If everything in your `scripts` directory can be safely executed by Windows,
 no action is needed (this is only likely if you don't have collaborators on
