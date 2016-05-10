@@ -1,12 +1,21 @@
 # Change Log
 
-## [Unreleased](https://github.com/testdouble/scripty/tree/HEAD)
-
-[Full Changelog](https://github.com/testdouble/scripty/compare/v1.5.0...HEAD)
+## [v1.6.0](https://github.com/testdouble/scripty/tree/v1.6.0) (2016-05-10)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.5.0...v1.6.0)
 
 **Implemented enhancements:**
 
 - Add a dry run option [\#13](https://github.com/testdouble/scripty/issues/13)
+
+**Closed issues:**
+
+- How well does scripty work with preinstall scripts? [\#33](https://github.com/testdouble/scripty/issues/33)
+- quiet output [\#28](https://github.com/testdouble/scripty/issues/28)
+
+**Merged pull requests:**
+
+- Lowercase Scripty in Readme [\#37](https://github.com/testdouble/scripty/pull/37) ([hanneskaeufler](https://github.com/hanneskaeufler))
+- Adds an env var to trigger a silent mode. [\#36](https://github.com/testdouble/scripty/pull/36) ([hanneskaeufler](https://github.com/hanneskaeufler))
 
 ## [v1.5.0](https://github.com/testdouble/scripty/tree/v1.5.0) (2016-04-23)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.4.0...v1.5.0)
