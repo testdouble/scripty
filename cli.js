@@ -23,9 +23,9 @@ if (!lifecycleEvent) {
 
   scripty(lifecycleEvent, {
     userArgs: process.argv.slice(2),
-    parallel: process.env['SCRIPTY_PARALLEL'] === 'true',
-    dryRun: process.env['SCRIPTY_DRY_RUN'] === 'true',
-    silent: process.env['SCRIPTY_SILENT'] === 'true',
+    parallel: process.env.npm_package_scripty_parallel || process.env['SCRIPTY_PARALLEL'] === 'true',
+    dryRun: process.env.npm_package_scripty_dryRun || process.env['SCRIPTY_DRY_RUN'] === 'true',
+    silent: process.env.npm_package_scripty_silent || process.env['SCRIPTY_SILENT'] === 'true',
     spawn: {
       stdio: 'inherit'
     },
