@@ -1,5 +1,17 @@
 # Change Log
 
+## [v1.7.0](https://github.com/testdouble/scripty/tree/v1.7.0) (2016-10-18)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.6.0...v1.7.0)
+
+**Closed issues:**
+
+- Always running child scripts in parallel on Windows [\#42](https://github.com/testdouble/scripty/issues/42)
+- Scripty scripts are missing from the output of `npm run` [\#41](https://github.com/testdouble/scripty/issues/41)
+
+**Merged pull requests:**
+
+- Allow all configuration via package.json. [\#39](https://github.com/testdouble/scripty/pull/39) ([Schoonology](https://github.com/Schoonology))
+
 ## [v1.6.0](https://github.com/testdouble/scripty/tree/v1.6.0) (2016-05-10)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.5.0...v1.6.0)
 
