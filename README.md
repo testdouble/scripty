@@ -151,6 +151,15 @@ variable in your package.json:
 
 Which will run any sub-scripts in parallel whenever you run `npm run watch`.
 
+Finally, if you **always** want to run scripts in parallel, any option can be
+set in your package.json under a `"scripty"` entry:
+
+```json
+"scripty": {
+  "parallel": true
+}
+```
+
 ### Windows support
 
 Windows support is provided by scripty in two ways:
@@ -217,6 +226,15 @@ $ SCRIPTY_DRY_RUN=true npm run publish:danger:stuff
 This will print the path and contents of each script the command would execute in
 the order they would be executed if you were to run the command normally.
 
+Worth mentioning, like all options this can be set in package.json under a
+`"scripty"` entry:
+
+```json
+"scripty": {
+  "dryRun": true
+}
+```
+
 ### Silent mode
 
 In case you don't want to the output to be cluttered by the script contents, you
@@ -228,6 +246,14 @@ $ SCRIPTY_SILENT=true npm run publish:danger:stuff
 
 This will omit printing the path and contents of each script the command executes.
 
+If you always want scripty to run your scripts silently, you can set it in
+your package.json under a `"scripty"` entry:
+
+```json
+"scripty": {
+  "silent": true
+}
+```
 ## Likely questions
 
 * **Is this black magic?** - Nope! For once, instilling some convention didn't
