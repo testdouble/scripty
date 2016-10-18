@@ -20,18 +20,19 @@ if (!lifecycleEvent) {
   process.exit(1)
 } else {
   var scripty = require('./lib/scripty')
+  var loadOption = require('./lib/load-option')
 
   scripty(lifecycleEvent, {
     userArgs: process.argv.slice(2),
-    parallel: process.env['SCRIPTY_PARALLEL'] === 'true',
-    dryRun: process.env['SCRIPTY_DRY_RUN'] === 'true',
-    silent: process.env['SCRIPTY_SILENT'] === 'true',
+    parallel: loadOption('parallel'),
+    dryRun: loadOption('dryRun'),
+    silent: loadOption('silent'),
     spawn: {
       stdio: 'inherit'
     },
     resolve: {
-      scripts: process.env.npm_package_scripty_path,
-      scriptsWin: process.env.npm_package_scripty_windowsPath
+      scripts: loadOption('path'),
+      scriptsWin: loadOption('windowsPath')
     }
   }, function (er, code) {
     if (er) { throw er }
