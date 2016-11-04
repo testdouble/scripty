@@ -1,0 +1,10 @@
+{
+  "name": "relative-path-loading",
+  "version": "0.0.0",
+  "scripts": {
+    "secret": "scripty"
+  },
+  "scripty": {
+    "path": "../custom-user-scripts"
+  }
+}
