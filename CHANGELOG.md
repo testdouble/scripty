@@ -1,5 +1,17 @@
 # Change Log
 
+## [Unreleased](https://github.com/testdouble/scripty/tree/HEAD)
+
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.7.0...HEAD)
+
+**Closed issues:**
+
+- v1.7.0 doesn't use custom path [\#45](https://github.com/testdouble/scripty/issues/45)
+
+**Merged pull requests:**
+
+- Fix loading custom scripts. [\#46](https://github.com/testdouble/scripty/pull/46) ([Schoonology](https://github.com/Schoonology))
+
 ## [v1.7.0](https://github.com/testdouble/scripty/tree/v1.7.0) (2016-10-18)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.6.0...v1.7.0)
 
