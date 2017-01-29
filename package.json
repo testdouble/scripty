@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "async": "^1.5.2",
+    "cross-spawn": "^5.0.1",
     "glob": "^7.0.3",
     "lodash": "^4.8.2"
   },
