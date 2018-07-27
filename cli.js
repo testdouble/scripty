@@ -25,6 +25,7 @@ if (!lifecycleEvent) {
   scripty(lifecycleEvent, {
     userArgs: process.argv.slice(2),
     parallel: loadOption('parallel'),
+    target: loadOption('target'),
     dryRun: loadOption('dryRun'),
     silent: loadOption('silent'),
     spawn: {
