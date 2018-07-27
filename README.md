@@ -261,7 +261,7 @@ require any clever metaprogramming, just environment variables npm already sets;
 try running `printenv` from a script some time!
 * **Why isn't my script executing?** - If your script isn't executing, make sure
 it's **executable**! In UNIX, this can be accomplished by running
-`chmod +x scripts/path/to/my/script`. Note that git stores the executable bit, so this is only necessary on script changes, not pulls.
+`chmod +x scripts/path/to/my/script` (permissions will also be stored in git)
 * **How can I expect my users to understand what this does?** Documenting your
 project's use of `scripty` in the `README` is probably a good idea. Here's
 some copy pasta if you don't feel like writing it up yourself:
