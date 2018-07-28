@@ -1,0 +1,4 @@
+{
+    "npm.packageManager": "npm",
+    "debug.node.autoAttach": "off"
+  }
