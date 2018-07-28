@@ -32,7 +32,9 @@ if (!lifecycleEvent) {
     },
     resolve: {
       scripts: loadOption('path'),
-      scriptsWin: loadOption('windowsPath')
+      scriptsWin: loadOption('windowsPath'),
+      builtIn: loadOption('preset'),
+      builtInWin: loadOption('windowsPreset')
     }
   }, function (er, code) {
     process.exitCode = code
