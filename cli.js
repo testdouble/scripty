@@ -31,6 +31,7 @@ if (!lifecycleEvent) {
       stdio: 'inherit'
     },
     resolve: {
+      modules: loadOption('modules'),
       scripts: loadOption('path'),
       scriptsWin: loadOption('windowsPath')
     }

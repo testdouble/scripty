@@ -48,7 +48,8 @@
   "dependencies": {
     "async": "^2.6.1",
     "glob": "^7.0.3",
-    "lodash": "^4.8.2"
+    "lodash": "^4.8.2",
+    "resolve-pkg": "^1.0.0"
   },
   "standard": {
     "globals": [
