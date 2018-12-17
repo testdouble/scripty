@@ -41,7 +41,7 @@
     "istanbul": "^0.4.3",
     "istanbul-combine": "searls/istanbul-combine",
     "semver": "^5.1.0",
-    "standard": "^11.0.1",
+    "standard": "^12.0.1",
     "teenytest": "^5.1.1",
     "testdouble": "^3.9.1"
   },
