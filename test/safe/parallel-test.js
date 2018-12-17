@@ -8,7 +8,7 @@ module.exports = {
   beforeEach: teardown,
   afterEach: teardown,
   works: function (done) {
-    runScripty('parallel', {parallel: true}, function (er, code, stdio) {
+    runScripty('parallel', { parallel: true }, function (er, code, stdio) {
       assert.equal(0, code)
       assert.includes(stdio.stdout, 'Batter waits for ball')
       assert.includes(stdio.stdout, 'Pitcher writes ball')
