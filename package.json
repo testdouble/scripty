@@ -43,7 +43,7 @@
     "semver": "^5.1.0",
     "standard": "^11.0.1",
     "teenytest": "^5.1.1",
-    "testdouble": "^3.8.1"
+    "testdouble": "^3.9.1"
   },
   "dependencies": {
     "async": "^2.6.1",
