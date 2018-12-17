@@ -4,6 +4,12 @@
   "description": "Because no one should be shell-scripting inside a JSON file.",
   "main": "lib/scripty.js",
   "bin": "cli.js",
+  "files": [
+    "cli.js",
+    "lib",
+    "scripts",
+    "scripts-win"
+  ],
   "scripts": {
     "test:unit": "teenytest \"lib/**/*.test.js\" --helper test/unit-helper.js",
     "test:safe": "teenytest \"test/safe/**/*.js\" --helper test/safe-helper.js",
