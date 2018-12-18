@@ -21,13 +21,15 @@ if (!lifecycleEvent) {
 } else {
   var scripty = require('./lib/scripty')
   var loadOption = require('./lib/load-option')
-  var loadLogLevel = require('./lib/load-log-level')
 
   scripty(lifecycleEvent, {
     userArgs: process.argv.slice(2),
     parallel: loadOption('parallel'),
     dryRun: loadOption('dryRun'),
-    logLevel: loadLogLevel(),
+    logLevel: loadOption('logLevel'),
+    quiet: loadOption('quiet'),
+    silent: loadOption('silent'),
+    verbose: loadOption('verbose'),
     spawn: {
       stdio: 'inherit'
     },
