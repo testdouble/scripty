@@ -2,7 +2,47 @@
 
 ## [Unreleased](https://github.com/testdouble/scripty/tree/HEAD)
 
-[Full Changelog](https://github.com/testdouble/scripty/compare/v1.7.0...HEAD)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.8.0...HEAD)
+
+**Closed issues:**
+
+- Sharable scripts via a npm package [\#68](https://github.com/testdouble/scripty/issues/68)
+- Support script/ along with scripts/ by default [\#52](https://github.com/testdouble/scripty/issues/52)
+
+**Merged pull requests:**
+
+- Omit test and misc files from npm tarball [\#73](https://github.com/testdouble/scripty/pull/73) ([jasonkarns](https://github.com/jasonkarns))
+- Support singular 'script' dirname convention [\#72](https://github.com/testdouble/scripty/pull/72) ([jasonkarns](https://github.com/jasonkarns))
+- DevDep bumps [\#71](https://github.com/testdouble/scripty/pull/71) ([jasonkarns](https://github.com/jasonkarns))
+
+## [v1.8.0](https://github.com/testdouble/scripty/tree/v1.8.0) (2018-10-10)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.7.2...v1.8.0)
+
+**Closed issues:**
+
+- Batch scripts skip directories [\#59](https://github.com/testdouble/scripty/issues/59)
+- Revive builtIn scripts resolver [\#58](https://github.com/testdouble/scripty/issues/58)
+- Spawn another lifecycle event [\#57](https://github.com/testdouble/scripty/issues/57)
+- Custom path for certain scripts? [\#55](https://github.com/testdouble/scripty/issues/55)
+- Customize "sub-scripts" separation char [\#40](https://github.com/testdouble/scripty/issues/40)
+
+**Merged pull requests:**
+
+- Add support for shareable modules [\#69](https://github.com/testdouble/scripty/pull/69) ([thoov](https://github.com/thoov))
+- Upgrade dependencies and node versions [\#66](https://github.com/testdouble/scripty/pull/66) ([rosston](https://github.com/rosston))
+- Add "permissions will also be stored in git" note to README [\#65](https://github.com/testdouble/scripty/pull/65) ([micimize](https://github.com/micimize))
+
+## [v1.7.2](https://github.com/testdouble/scripty/tree/v1.7.2) (2017-08-29)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.7.1...v1.7.2)
+
+**Merged pull requests:**
+
+- Clean up exits. [\#50](https://github.com/testdouble/scripty/pull/50) ([Schoonology](https://github.com/Schoonology))
+- chore: update travis.yml with node 6lts + @stable [\#49](https://github.com/testdouble/scripty/pull/49) ([JaKXz](https://github.com/JaKXz))
+- chore: update appveyor with node 6lts [\#48](https://github.com/testdouble/scripty/pull/48) ([JaKXz](https://github.com/JaKXz))
+
+## [v1.7.1](https://github.com/testdouble/scripty/tree/v1.7.1) (2016-12-21)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.7.0...v1.7.1)
 
 **Closed issues:**
 
