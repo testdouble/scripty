@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/testdouble/scripty/tree/HEAD)
-
-[Full Changelog](https://github.com/testdouble/scripty/compare/v1.8.0...HEAD)
+## [v1.9.0](https://github.com/testdouble/scripty/tree/v1.9.0) (2018-12-18)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.8.0...v1.9.0)
 
 **Closed issues:**
 
