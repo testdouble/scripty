@@ -27,7 +27,6 @@ if (!lifecycleEvent) {
     userArgs: process.argv.slice(2),
     parallel: loadOption('parallel'),
     dryRun: loadOption('dryRun'),
-    silent: loadOption('silent'),
     logLevel: loadLogLevel(),
     spawn: {
       stdio: 'inherit'
