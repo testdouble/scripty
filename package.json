@@ -11,15 +11,15 @@
     "scripts-win"
   ],
   "scripts": {
-    "test:unit": "teenytest \"lib/**/*.test.js\" --helper test/unit-helper.js",
-    "test:safe": "teenytest \"test/safe/**/*.js\" --helper test/safe-helper.js",
+    "test:unit": "teenytest 'lib/**/*.test.js' --helper test/unit-helper.js",
+    "test:safe": "teenytest 'test/safe/**/*.js' --helper test/safe-helper.js",
     "test:style": "standard",
     "test": "npm run test:unit && npm run test:style && npm run test:safe",
-    "test:cover": "npm run test:cover:unit && npm run test:cover:safe && npm run test:cover:combine",
-    "test:cover:unit": "istanbul cover --dir coverage/unit teenytest -- \"lib/**/*.test.js\" --helper test/unit-helper.js",
-    "test:cover:safe": "istanbul cover --dir coverage/safe teenytest -- \"test/safe/**/*.js\" --helper test/safe-helper.js",
-    "test:cover:combine": "istanbul-combine -d coverage/combine coverage/unit/coverage.json coverage/safe/coverage.json",
-    "test:cover:upload": "codeclimate-test-reporter < coverage/combine/lcov.info"
+    "test:cover": "npm run test:cover:unit && npm run test:cover:safe",
+    "posttest:cover": "istanbul report",
+    "test:cover:unit": "istanbul cover --dir coverage/unit teenytest -- 'lib/**/*.test.js' --helper test/unit-helper.js",
+    "test:cover:safe": "istanbul cover --dir coverage/safe teenytest -- 'test/safe/**/*.js' --helper test/safe-helper.js",
+    "test:cover:upload": "codeclimate-test-reporter < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,6 @@
     "codeclimate-test-reporter": "^0.5.1",
     "intercept-stdout": "^0.1.2",
     "istanbul": "^0.4.3",
-    "istanbul-combine": "searls/istanbul-combine",
     "semver": "^5.1.0",
     "standard": "^12.0.1",
     "teenytest": "^5.1.1",
