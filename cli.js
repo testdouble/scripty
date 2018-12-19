@@ -21,6 +21,7 @@ if (!lifecycleEvent) {
 } else {
   var scripty = require('./lib/scripty')
   var loadOption = require('./lib/load-option')
+  var log = require('./lib/log')
 
   scripty(lifecycleEvent, {
     userArgs: process.argv.slice(2),
@@ -40,7 +41,7 @@ if (!lifecycleEvent) {
     }
   }, function (er, code) {
     if (er) {
-      console.error(er)
+      log.error(er)
       code = code || er.code || 1
     }
     process.exitCode = code
