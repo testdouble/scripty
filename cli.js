@@ -36,6 +36,10 @@ if (!lifecycleEvent) {
       scriptsWin: loadOption('windowsPath')
     }
   }, function (er, code) {
+    if (er) {
+      console.error(er)
+      code = code || er.code || 1
+    }
     process.exitCode = code
   })
 }
