@@ -4,10 +4,8 @@ var lifecycleEvent = process.env.npm_lifecycle_event
 
 if (!lifecycleEvent) {
   console.error(
-    'Error: scripty - it seems you may be running scripty from the ' +
-    'command-line directly.\n' +
-    'At this time, scripty can only be run within an ' +
-    'npm script specified in your package.json.\n\n' +
+    'scripty ERR! It seems you may be running scripty from the command-line directly.\n' +
+    'At this time, scripty can only be run within an npm script specified in your package.json.\n\n' +
     'Example package.json entry:\n\n' +
     '  "scripts": {\n' +
     '    "foo:bar": "scripty"\n' +
