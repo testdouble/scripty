@@ -1,8 +1,8 @@
 environment:
   matrix:
-    - nodejs_version: "6"
-    - nodejs_version: "8"
-    - nodejs_version: "10"
+    - nodejs_version: 10
+    - nodejs_version: 8
+    - nodejs_version: 6
 
 install:
   - git rev-parse HEAD
@@ -16,7 +16,4 @@ cache:
 build: off
 
 test_script:
-  - node --version
-  - npm --version
   - npm test
-
