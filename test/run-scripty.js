@@ -8,6 +8,7 @@ module.exports = function (name, opts, cb) {
   var stdio = {}
 
   scripty(name, _.defaultsDeep({}, opts, {
+    logLevel: 'silent',
     resolve: {
       builtIn: path.resolve('test/fixtures/built-in-scripts'),
       builtInWin: path.resolve('test/fixtures/built-in-scripts-win'),

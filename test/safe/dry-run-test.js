@@ -1,5 +1,5 @@
 var runScripty = require('../run-scripty')
-var log = require('../../lib/run/log')
+var log = require('../../lib/log')
 
 module.exports = function doesNotRunButPrintResolvedScripts (done) {
   runScripty('hello:world', { dryRun: true }, function (er, code, stdio) {

@@ -1,5 +1,6 @@
 var runScripty = require('../run-scripty')
-var log = require('../../lib/run/log')
+var log = require('../../lib/log')
+const path = require('path')
 
 module.exports = {
   outputAndRunScript: function (done) {
@@ -19,7 +20,7 @@ module.exports = {
     runScripty('not:a:real:thing', {}, function (er, code, stdio) {
       assert.notEqual(0, code)
       assert.includes(er.message,
-        'Error: scripty - no script found for npm lifecycle "not:a:real:thing"'
+        `No script found for npm lifecycle 'not:a:real:thing'`
       )
 
       done(null)
@@ -28,10 +29,7 @@ module.exports = {
   scriptFoundButFailed: function (done) {
     runScripty('fail', {}, function (er, code, stdio) {
       assert.notEqual(0, code)
-      assert.includes(er.message,
-        'Error: scripty - script "fail" failed by exiting ' +
-        'with a non-zero code (' + code + ').'
-      )
+      assert.includes(er.message, `script failed: '${path.resolve('test/fixtures/user-scripts/fail')}'\nexit status: ${code}`)
       if (process.platform === 'win32') {
         assert.includes(stdio.stderr, 'The system cannot find the path specified.')
       } else {

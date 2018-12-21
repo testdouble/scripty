@@ -271,25 +271,37 @@ Worth mentioning, like all options this can be set in package.json under a
 }
 ```
 
-### Silent mode
+### Log output
 
-In case you don't want to the output to be cluttered by the script contents, you
-can run scripty in silent mode:
+Scripty is now quieter by default.
+The output can be configured to a level of `verbose`, `info`, `warn`, or `error`.
+Any logs equal to or higher than the setting are shown.
+All logs are printed to STDERR (to aid in redirection and piping).
 
 ```
-$ SCRIPTY_SILENT=true npm run publish:danger:stuff
+$ SCRIPTY_LOG_LEVEL=verbose npm run publish:danger:stuff
 ```
 
-This will omit printing the path and contents of each script the command executes.
+This will print the path and contents of each script the command executes.
 
-If you always want scripty to run your scripts silently, you can set it in
-your package.json under a `"scripty"` entry:
+If you always want scripty to run your scripts at a certain level,
+you can set it in your package.json under a `"scripty"` entry:
 
 ```json
 "scripty": {
-  "silent": true
+  "logLevel": "warn"
 }
 ```
+
+`SCRIPTY_SILENT` and `SCRIPTY_QUIET` are aliases for `SCRIPTY_LOG_LEVEL=silent`
+`SCRIPTY_VERBOSE` is an alias for `SCRIPTY_LOG_LEVEL=verbose`
+(also `"silent": true`, etc in package.json#scripty)
+
+`SCRIPTY_DRY_RUN=true` implies log level `info`
+
+Explicit setting from logLevel takes precedence; otherwise,
+conflicting values between silent/verbose/dryRun will respect the highest level.
+
 ## Likely questions
 
 * **Is this black magic?** - Nope! For once, instilling some convention didn't
