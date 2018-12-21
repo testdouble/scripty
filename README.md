@@ -301,6 +301,7 @@ you can set it in your package.json under a `"scripty"` entry:
 
 Explicit setting from logLevel takes precedence; otherwise,
 conflicting values between silent/verbose/dryRun will respect the highest level.
+If no setting is provided, scripty will infer its log level from npm's log level.
 
 ## Likely questions
 
