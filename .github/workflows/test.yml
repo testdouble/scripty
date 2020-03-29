@@ -8,10 +8,22 @@ jobs:
       matrix:
         os: [ubuntu, macOS, windows]
         node: [ 10, 12 ]
-
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node }}
     - run: npm cit
+
+  coverage:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm ci
+    - uses: paambaati/codeclimate-action@v2.5.6
+      env:
+        CC_TEST_REPORTER_ID: 9d15839896b415ac2fe38d4bd4836a2920d377b8ab7558e45ab12c4c64bdccb6
+      with:
+        coverageCommand: npm run test:cover
+        coverageLocations: coverage/lcov.info:lcov

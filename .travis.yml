@@ -5,9 +5,3 @@ node_js:
   - 12
   - 10
   - 8
-after_script:
-  - npm run test:cover
-  - npm run test:cover:upload
-addons:
-  code_climate:
-    repo_token: 9d15839896b415ac2fe38d4bd4836a2920d377b8ab7558e45ab12c4c64bdccb6
