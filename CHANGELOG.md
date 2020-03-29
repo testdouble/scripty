@@ -1,5 +1,16 @@
 # Change Log
 
+## [v1.9.1](https://github.com/testdouble/scripty/tree/v1.9.1) (2019-02-19)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.9.0...v1.9.1)
+
+**Closed issues:**
+
+- Multiple script locations [\#79](https://github.com/testdouble/scripty/issues/79)
+
+**Merged pull requests:**
+
+- Bumps lodash to latest [\#80](https://github.com/testdouble/scripty/pull/80) ([jasonkarns](https://github.com/jasonkarns))
+
 ## [v1.9.0](https://github.com/testdouble/scripty/tree/v1.9.0) (2018-12-18)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.8.0...v1.9.0)
 
