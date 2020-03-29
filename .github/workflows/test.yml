@@ -1,0 +1,17 @@
+name: Test
+on: push
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      matrix:
+        os: [ubuntu, macOS, windows]
+        node: [ 6, 8, 10, 12 ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+    - run: npm it
