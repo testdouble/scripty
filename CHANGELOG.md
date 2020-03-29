@@ -1,5 +1,23 @@
 # Change Log
 
+## [v2.0.0](https://github.com/testdouble/scripty/tree/v2.0.0) (2020-03-29)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v1.9.1...v2.0.0)
+
+**Closed issues:**
+
+- Script name and content is always printed [\#84](https://github.com/testdouble/scripty/issues/84)
+- Default to silent mode; allow verbose option [\#70](https://github.com/testdouble/scripty/issues/70)
+
+**Merged pull requests:**
+
+- Adds the Test Double code of conduct [\#81](https://github.com/testdouble/scripty/pull/81) ([ericqweinstein](https://github.com/ericqweinstein))
+- Infer log level from npm's own logLevel [\#78](https://github.com/testdouble/scripty/pull/78) ([jasonkarns](https://github.com/jasonkarns))
+- Tweak travis/appveyor configs [\#77](https://github.com/testdouble/scripty/pull/77) ([jasonkarns](https://github.com/jasonkarns))
+- Report errors by console-logging and exit code [\#76](https://github.com/testdouble/scripty/pull/76) ([jasonkarns](https://github.com/jasonkarns))
+- Let istanbul generate combined coverage report [\#75](https://github.com/testdouble/scripty/pull/75) ([jasonkarns](https://github.com/jasonkarns))
+- Shore up logging behavior [\#74](https://github.com/testdouble/scripty/pull/74) ([jasonkarns](https://github.com/jasonkarns))
+
+
 ## [v1.9.1](https://github.com/testdouble/scripty/tree/v1.9.1) (2019-02-19)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.9.0...v1.9.1)
 
