@@ -1,7 +1,17 @@
 {
   "name": "scripty",
   "version": "2.0.0-0",
+  "homepage": "https://github.com/testdouble/scripty#readme",
   "description": "Because no one should be shell-scripting inside a JSON file.",
+  "license": "MIT",
+  "author": "Justin Searls <searls@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdouble/scripty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/testdouble/scripty/issues"
+  },
   "main": "lib/scripty.js",
   "bin": "cli.js",
   "files": [
@@ -21,25 +31,12 @@
     "test:cover:safe": "istanbul cover --dir coverage/safe teenytest -- 'test/safe/**/*.js' --helper test/safe-helper.js",
     "test:cover:upload": "codeclimate-test-reporter < coverage/lcov.info"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/testdouble/scripty.git"
+  "dependencies": {
+    "async": "^2.6.1",
+    "glob": "^7.0.3",
+    "lodash": "^4.17.11",
+    "resolve-pkg": "^1.0.0"
   },
-  "keywords": [
-    "npm",
-    "scripts",
-    "dry",
-    "scripts",
-    "shell",
-    "script",
-    "management"
-  ],
-  "author": "Justin Searls <searls@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/testdouble/scripty/issues"
-  },
-  "homepage": "https://github.com/testdouble/scripty#readme",
   "devDependencies": {
     "assert": "^1.3.0",
     "codeclimate-test-reporter": "^0.5.1",
@@ -50,12 +47,15 @@
     "teenytest": "^5.1.1",
     "testdouble": "^3.9.1"
   },
-  "dependencies": {
-    "async": "^2.6.1",
-    "glob": "^7.0.3",
-    "lodash": "^4.17.11",
-    "resolve-pkg": "^1.0.0"
-  },
+  "keywords": [
+    "npm",
+    "scripts",
+    "dry",
+    "scripts",
+    "shell",
+    "script",
+    "management"
+  ],
   "standard": {
     "globals": [
       "td",
