@@ -305,7 +305,7 @@ If no setting is provided, scripty will infer its log level from npm's log level
 
 ## Likely questions
 
-* **Is this black magic?** - Nope! For once, instilling some convention didn't
+* **Is this pure magic?** - Nope! For once, instilling some convention didn't
 require any clever metaprogramming, just environment variables npm already sets;
 try running `printenv` from a script some time!
 * **Why isn't my script executing?** - If your script isn't executing, make sure
