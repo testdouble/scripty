@@ -1,9 +1,10 @@
 language: node_js
 node_js:
   - node
+  - 14
+  - 12
   - 10
   - 8
-  - 6
 after_script:
   - npm run test:cover
   - npm run test:cover:upload
