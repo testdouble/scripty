@@ -1,7 +1,7 @@
 # scripty
 
-[![Unix Build Status](https://travis-ci.org/testdouble/scripty.svg?branch=master)](https://travis-ci.org/testdouble/scripty)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/3oduiun4em1gdr3o/branch/master?svg=true)](https://ci.appveyor.com/project/testdouble/scripty)
+[![Unix Build Status](https://travis-ci.org/testdouble/scripty.svg?branch=main)](https://travis-ci.org/testdouble/scripty)
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/3oduiun4em1gdr3o/branch/main?svg=true)](https://ci.appveyor.com/project/testdouble/scripty)
 [![npmjs](https://img.shields.io/badge/npm-scripty-red.svg)](https://www.npmjs.com/package/scripty)
 [![Test Coverage](https://codeclimate.com/github/testdouble/scripty/badges/coverage.svg)](https://codeclimate.com/github/testdouble/scripty/coverage)
 
@@ -215,8 +215,8 @@ projects share the same set of scripts.
 
 ### Sharing scripts via node modules
 
-You can configure scripty to include certain node modules into its executable 
-search space. This is beneficial if you would like to create a centralized place 
+You can configure scripty to include certain node modules into its executable
+search space. This is beneficial if you would like to create a centralized place
 for your scripts and then share them across multiple projects. To include modules
 add a `"scripty"` object property, `modules`, to your package.json like so:
 
@@ -244,7 +244,7 @@ root/
         baz
 ```
 
-In the above example the resolution of `foo` would resolve to `root.scripts.foo`. Local scripts 
+In the above example the resolution of `foo` would resolve to `root.scripts.foo`. Local scripts
 take priority over ones defined in modules. The resolution of `bar` would resolve to
 `root.node_modules.packageA.scripts.bar` as packageA was the first module defined
 in the `scripty.modules` config.
