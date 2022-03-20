@@ -155,8 +155,10 @@ Finally, if you **always** want to run scripts in parallel, any option can be
 set in your package.json under a `"scripty"` entry:
 
 ```json
-"scripty": {
-  "parallel": true
+"config": {
+  "scripty": {
+    "parallel": true
+  }
 }
 ```
 
@@ -203,9 +205,11 @@ If you'd like to customize the base directories scripty uses to search for your
 scripts, add a `"scripty"` object property to your package.json like so:
 
 ``` json
-"scripty": {
-  "path": "../core/scripts",
-  "windowsPath": "../core/scripts-win"
+"config": {
+  "scripty": {
+    "path": "../core/scripts",
+    "windowsPath": "../core/scripts-win"
+  }
 }
 ```
 
@@ -221,8 +225,10 @@ for your scripts and then share them across multiple projects. To include module
 add a `"scripty"` object property, `modules`, to your package.json like so:
 
 ``` json
-"scripty": {
-  "modules": ["packageA", "packageB"]
+"config": {
+  "scripty": {
+    "modules": ["packageA", "packageB"]
+  }
 }
 ```
 
@@ -266,8 +272,10 @@ Worth mentioning, like all options this can be set in package.json under a
 `"scripty"` entry:
 
 ```json
-"scripty": {
-  "dryRun": true
+"config": {
+  "scripty": {
+    "dryRun": true
+  }
 }
 ```
 
@@ -288,8 +296,10 @@ If you always want scripty to run your scripts at a certain level,
 you can set it in your package.json under a `"scripty"` entry:
 
 ```json
-"scripty": {
-  "logLevel": "warn"
+"config": {
+  "scripty": {
+    "logLevel": "warn"
+  }
 }
 ```
 
