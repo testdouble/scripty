@@ -1,6 +1,6 @@
 {
   "name": "scripty",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "homepage": "https://github.com/testdouble/scripty#readme",
   "description": "Because no one should be shell-scripting inside a JSON file.",
   "license": "MIT",
