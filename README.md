@@ -1,7 +1,7 @@
 # scripty
 
 [![Latest npm release](https://img.shields.io/npm/v/scripty?logo=npm)](https://www.npmjs.com/package/scripty)
-[![Test Status](https://img.shields.io/github/workflow/status/testdouble/scripty/Test?logo=github)](https://github.com/testdouble/scripty/actions?query=workflow%3ATest)
+[![Test Status](https://img.shields.io/github/workflow/status/testdouble/scripty/Test/main?logo=github)](https://github.com/testdouble/scripty/actions?query=workflow%3ATest+branch%3Amain)
 
 ## What is?
 
