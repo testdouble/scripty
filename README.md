@@ -2,7 +2,6 @@
 
 [![Latest npm release](https://img.shields.io/npm/v/scripty?logo=npm)](https://www.npmjs.com/package/scripty)
 [![Test Status](https://img.shields.io/github/workflow/status/testdouble/scripty/Test?logo=github)](https://github.com/testdouble/scripty/actions?query=workflow%3ATest)
-[![Test Coverage](https://img.shields.io/codeclimate/coverage/testdouble/scripty?color=4dd199&label=test%20coverage)](https://codeclimate.com/github/testdouble/scripty/coverage)
 
 ## What is?
 
