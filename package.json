@@ -29,7 +29,6 @@
     "posttest:cover": "istanbul report",
     "test:cover:unit": "istanbul cover --dir coverage/unit teenytest -- 'lib/**/*.test.js' --helper test/unit-helper.js",
     "test:cover:safe": "istanbul cover --dir coverage/safe teenytest -- 'test/safe/**/*.js' --helper test/safe-helper.js",
-    "test:cover:upload": "codeclimate-test-reporter < coverage/lcov.info",
     "postversion": "npm publish && git push --follow-tags"
   },
   "dependencies": {
@@ -40,7 +39,6 @@
   },
   "devDependencies": {
     "assert": "^1.3.0",
-    "codeclimate-test-reporter": "^0.5.1",
     "intercept-stdout": "^0.1.2",
     "istanbul": "^0.4.3",
     "semver": "^5.1.0",

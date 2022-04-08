@@ -1,9 +1,7 @@
 # scripty
 
-[![Unix Build Status](https://travis-ci.org/testdouble/scripty.svg?branch=main)](https://travis-ci.org/testdouble/scripty)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/3oduiun4em1gdr3o/branch/main?svg=true)](https://ci.appveyor.com/project/testdouble/scripty)
-[![npmjs](https://img.shields.io/badge/npm-scripty-red.svg)](https://www.npmjs.com/package/scripty)
-[![Test Coverage](https://codeclimate.com/github/testdouble/scripty/badges/coverage.svg)](https://codeclimate.com/github/testdouble/scripty/coverage)
+[![Latest npm release](https://img.shields.io/npm/v/scripty?logo=npm)](https://www.npmjs.com/package/scripty)
+[![Test Status](https://img.shields.io/github/workflow/status/testdouble/scripty/Test?logo=github)](https://github.com/testdouble/scripty/actions?query=workflow%3ATest)
 
 ## What is?
 
