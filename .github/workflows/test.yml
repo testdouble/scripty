@@ -13,6 +13,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node }}
+        cache: 'npm'
     - name: Run tests for Node ${{ matrix.node }} on ${{ matrix.os }}
       run: npm cit
 
