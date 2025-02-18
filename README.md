@@ -1,7 +1,12 @@
 # scripty
 
-[![Latest npm release](https://img.shields.io/npm/v/scripty?logo=npm)](https://www.npmjs.com/package/scripty)
-[![Test Status](https://img.shields.io/github/workflow/status/testdouble/scripty/Test/main?logo=github)](https://github.com/testdouble/scripty/actions?query=workflow%3ATest+branch%3Amain)
+## ⛔ DEPRECATED ⛔
+
+scripty is deprecated and unmaintained.
+
+Why? The JavaScript package ecosystem has gotten more complicated since April 2016, with scripty predating Bun — and even yarn and pnpm by a few months. Additionally, certain lifecycle scripts (like `preinstall`, `install`, `prepare`, `prepublish`, and `prepack`) may trigger before scripty is available and can't reliably use scripty anyway. Most people will generally be better off explicitly referencing their script files from the `package.json` rather than relying on scripty's convention.
+
+We have no plans to hand off the package or resurrect it, but you are of course welcome to fork it.
 
 ## What is?
 
