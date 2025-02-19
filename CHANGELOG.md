@@ -1,5 +1,10 @@
 # Change Log
 
+## [v3.0.0](https://github.com/testdouble/scripty/tree/v3.0.0) (2025-02-18)
+[Full Changelog](https://github.com/testdouble/scripty/compare/v2.1.1...v3.0.0)
+
+- Deprecate scripty
+
 ## [v2.0.0](https://github.com/testdouble/scripty/tree/v2.0.0) (2020-03-29)
 [Full Changelog](https://github.com/testdouble/scripty/compare/v1.9.1...v2.0.0)
 
